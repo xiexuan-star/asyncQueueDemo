@@ -57,9 +57,3 @@ queue.add({ key: 'item3' }, (err, result) => {
 // 当key重复,那么当第一个key对应的任务结束后
 // 会将这个任务的结果直接给到后续的同key任务
 ```
-
-### 4 implements
-
-当调用add时,通过_willEnsureProcessing防止一次EventLoop中多次执行队列表用函数
-
-在本次EventLoop中收集入队任务
